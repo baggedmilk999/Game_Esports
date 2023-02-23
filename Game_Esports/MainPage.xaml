@@ -5,7 +5,10 @@
 
     <ScrollView>
         <VerticalStackLayout>
-            <Label Text="Player Input"></Label>
+            <Label 
+            Text="Add Student"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" />
 
         </VerticalStackLayout>
     </ScrollView>

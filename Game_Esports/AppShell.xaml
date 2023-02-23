@@ -9,7 +9,9 @@
     <ShellContent
         Title="Player Input"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Route="MainPage" 
+        
+        />
     <FlyoutItem Title="Player Info">
         <ShellContent ContentTemplate="{DataTemplate local:PlayerInfo}">
 
