@@ -4,12 +4,37 @@
              x:Class="Game_Esports.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout>
+        <VerticalStackLayout Spacing="10">
             <Label 
             Text="Add Student"
             VerticalOptions="Center" 
             HorizontalOptions="Start" />
-
+            <Label
+                Text="Player ID (Numbers Only)" >
+            </Label>
+            <Entry
+                x:Name="PlayerID" ></Entry>
+            <Label Text="First Name"></Label>
+            <Entry
+                x:Name="FirstName"></Entry>
+            <Label Text="Last Name"></Label>
+            <Entry x:Name="LastName"></Entry>
+            <Label Text="Phone No."></Label>
+            <Entry x:Name="PhoneNo"></Entry>
+            <Label Text="Discord ID"></Label>
+            <Entry x:Name="DiscordID"/>
+            <Label Text="eSports Game"/>
+            <Picker BackgroundColor="Grey">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Valorant</x:String>
+                        <x:String>Fortnite</x:String>
+                        <x:String>Rocket League</x:String>
+                        <x:String>Super Smash Bros.</x:String>
+                        <x:String>Overwatch</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
         </VerticalStackLayout>
     </ScrollView>
 
