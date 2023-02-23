@@ -35,6 +35,7 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
+            <Button Text="Submit" TextColor="Black"></Button>
         </VerticalStackLayout>
     </ScrollView>
 

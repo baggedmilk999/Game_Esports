@@ -8,5 +8,25 @@
             Text="View student info"
             VerticalOptions="Center" 
             HorizontalOptions="Start" />
+        <Label 
+            Text="Add Student"
+            VerticalOptions="Center" 
+            HorizontalOptions="Start" />
+        <Label
+                Text="Player ID (Numbers Only)" >
+        </Label>
+        <Entry
+                x:Name="PlayerID" IsReadOnly="True"></Entry>
+        <Label Text="First Name"></Label>
+        <Entry
+                x:Name="FirstName" IsReadOnly="True"></Entry>
+        <Label Text="Last Name"></Label>
+        <Entry x:Name="LastName" IsReadOnly="True"></Entry>
+        <Label Text="Phone No."></Label>
+        <Entry x:Name="PhoneNo" IsReadOnly="True"></Entry>
+        <Label Text="Discord ID"></Label>
+        <Entry x:Name="DiscordID" IsReadOnly="True"/>
+        <Label Text="eSports Game"/>
+        <Entry x:Name="esportsGame" IsReadOnly="True"/>
     </VerticalStackLayout>
 </ContentPage>
