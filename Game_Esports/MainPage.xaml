@@ -4,54 +4,54 @@
              x:Class="Game_Esports.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout Spacing="10">
+        <VerticalStackLayout Spacing="16" VerticalOptions="Center">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Label Text="Player ID (Numbers Only)" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Entry x:Name="PlayerID" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Player ID (Numbers Only)" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+                <Entry x:Name="PlayerID" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="8,0,16,0"/>
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Label Text="First Name" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Entry x:Name="FirstName" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="First Name" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+                <Entry x:Name="FirstName" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="8,0,16,0"/>
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Label Text="Last Name" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Entry x:Name="LastName" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Last Name" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+                <Entry x:Name="LastName" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="8,0,16,0"/>
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Label Text="Phone No." Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Entry x:Name="PhoneNumber" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Phone No." Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+                <Entry x:Name="PhoneNumber" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="8,0,16,0"/>
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Label Text="Discord ID" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Entry x:Name="DiscordID" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Label Text="Discord ID" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+                <Entry x:Name="DiscordID" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="8,0,16,0"/>
             </Grid>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Label Text="eSports Game" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
-                <Picker x:Name="EsportsGame" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">
+                <Label Text="eSports Game" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+                <Picker x:Name="EsportsGame" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="8,0,16,0">
                     <Picker.ItemsSource>
                         <x:Array Type="{x:Type x:String}">
                             <x:String>Valorant</x:String>
@@ -63,7 +63,7 @@
                     </Picker.ItemsSource>
                 </Picker>
             </Grid>
-            <Button Text="Submit" TextColor="Black" x:Name="SubmitStudentInfo" Clicked="SubmitStudentInfo_Clicked"></Button>
+            <Button BackgroundColor="{StaticResource Primary}" TextColor="{StaticResource Gray100}" Text="Submit" x:Name="SubmitStudentInfo" Clicked="SubmitStudentInfo_Clicked" Margin="16,0"></Button>
         </VerticalStackLayout>
     </ScrollView>
 

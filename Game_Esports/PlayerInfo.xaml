@@ -2,31 +2,58 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Game_Esports.PlayerInfo"
-             Title="PlayerInfo">
-    <VerticalStackLayout>
+             Title="View Student Info">
+    <VerticalStackLayout Spacing="16" VerticalOptions="Center">
         <Label 
-            Text="View student info"
-            VerticalOptions="Center" 
-            HorizontalOptions="Start" />
-        <Label 
-            Text="Add Student"
-            VerticalOptions="Center" 
-            HorizontalOptions="Start" />
-        <Label
-                Text="Player ID (Numbers Only)" >
+                Text="Player ID (Numbers Only)" Margin="16,0,0,0" >
         </Label>
-        <Entry
-                x:Name="PlayerID" IsReadOnly="True"></Entry>
-        <Label Text="First Name"></Label>
-        <Entry
-                x:Name="FirstName" IsReadOnly="True"></Entry>
-        <Label Text="Last Name"></Label>
-        <Entry x:Name="LastName" IsReadOnly="True"></Entry>
-        <Label Text="Phone No."></Label>
-        <Entry x:Name="PhoneNo" IsReadOnly="True"></Entry>
-        <Label Text="Discord ID"></Label>
-        <Entry x:Name="DiscordID" IsReadOnly="True"/>
-        <Label Text="eSports Game"/>
-        <Entry x:Name="esportsGame" IsReadOnly="True"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Entry x:Name="LookupID" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+            <Button BackgroundColor="{StaticResource Primary}" TextColor="{StaticResource Gray100}" Text="Lookup" x:Name="LookupStudentInfo" Clicked="LookupStudentInfo_Clicked" Grid.Column="1" Margin="8,0,16,0" />
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="First Name" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+            <Entry x:Name="FirstNameLookup" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" IsReadOnly="True" Margin="8,0,16,0"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Last Name" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+            <Entry x:Name="LastNameLookup" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" IsReadOnly="True" IsSpellCheckEnabled="False" Margin="8,0,16,0"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Phone No." Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+            <Entry x:Name="PhoneNumberLookup" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" IsReadOnly="True" Margin="8,0,16,0"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Discord ID" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+            <Entry x:Name="DiscordIDLookup" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" IsReadOnly="True" Margin="8,0,16,0"/>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Text="eSports Game" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+            <Entry x:Name="GameLookup" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" IsReadOnly="True" Margin="8,0,16,0"/>
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>
