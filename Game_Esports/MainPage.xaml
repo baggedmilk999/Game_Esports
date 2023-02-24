@@ -4,38 +4,66 @@
              x:Class="Game_Esports.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout Spacing="10">
-            <Label 
-            Text="Add Student"
-            VerticalOptions="Center" 
-            HorizontalOptions="Start" />
-            <Label
-                Text="Player ID (Numbers Only)" >
-            </Label>
-            <Entry
-                x:Name="PlayerID" ></Entry>
-            <Label Text="First Name"></Label>
-            <Entry
-                x:Name="FirstName"></Entry>
-            <Label Text="Last Name"></Label>
-            <Entry x:Name="LastName"></Entry>
-            <Label Text="Phone No."></Label>
-            <Entry x:Name="PhoneNo"></Entry>
-            <Label Text="Discord ID"></Label>
-            <Entry x:Name="DiscordID"/>
-            <Label Text="eSports Game"/>
-            <Picker BackgroundColor="Grey">
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Valorant</x:String>
-                        <x:String>Fortnite</x:String>
-                        <x:String>Rocket League</x:String>
-                        <x:String>Super Smash Bros.</x:String>
-                        <x:String>Overwatch</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
-            <Button Text="Submit" TextColor="Black"></Button>
+        <VerticalStackLayout Spacing="16" VerticalOptions="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Player ID (Numbers Only)" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+                <Entry x:Name="PlayerID" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="8,0,16,0"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="First Name" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+                <Entry x:Name="FirstName" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="8,0,16,0"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Last Name" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+                <Entry x:Name="LastName" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="8,0,16,0"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Phone No." Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+                <Entry x:Name="PhoneNumber" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="8,0,16,0"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Discord ID" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+                <Entry x:Name="DiscordID" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="8,0,16,0"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="eSports Game" Grid.Column="0" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="16,0,8,0"/>
+                <Picker x:Name="EsportsGame" Grid.Column="1" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Margin="8,0,16,0">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Valorant</x:String>
+                            <x:String>Fortnite</x:String>
+                            <x:String>Rocket League</x:String>
+                            <x:String>Super Smash Bros.</x:String>
+                            <x:String>Overwatch</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+            </Grid>
+            <Button BackgroundColor="{StaticResource Primary}" TextColor="{StaticResource Gray100}" Text="Submit" x:Name="SubmitStudentInfo" Clicked="SubmitStudentInfo_Clicked" Margin="16,0"></Button>
         </VerticalStackLayout>
     </ScrollView>
 

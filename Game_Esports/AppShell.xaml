@@ -7,12 +7,12 @@
     Shell.FlyoutBehavior="Flyout">
 
     <ShellContent
-        Title="Player Input"
+        Title="Add Student"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" 
         
         />
-    <FlyoutItem Title="Player Info">
+    <FlyoutItem Title="View Student Info">
         <ShellContent ContentTemplate="{DataTemplate local:PlayerInfo}">
 
         </ShellContent>
